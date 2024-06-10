@@ -233,10 +233,7 @@
     z-index: 5;
     color: white;
     margin-top: 10px;
-    margin-right: px;
-  }
-
-  .trend-text {
+    margin-right: 10px;
     text-transform: uppercase;
     font-size: 20px;
     font-family: OpenSans-Bold,sans-serif;
@@ -560,49 +557,42 @@
     color: #e0d7be;
   }
 
-  .our_products_box{
-    padding-top: 40px;
+  .our_products_space{
+    margin: auto;
+    max-width: 1170px;
+    margin-top: 64px;
   }
 
-  .our_products_space {
+  .our_products_box {
     display: flex;
-    max-width: 1215px;
-    margin-left:auto;
-    margin-right:auto;
     flex-wrap: wrap;
-    padding-top: 170px;
-    margin-bottom: -200px;
-    align-items: center;
+    justify-content: space-between;
   }
 
-  .our_products_img {
+  .our_products_content {
+    position: relative;
+    padding-top: 200px;
+    width: calc(33.33% - 20px);
+  }
+
+  .our_products_img{
     position: absolute;
-    top: -170;
-    z-index: 2;
-    left: 30;
+    top:25;
+    right: 40;
   }
 
   .our_products_article {
     position: relative;
     border: 2px solid #b59f5b;
-    min-height: 170px;
-    padding-top: 40px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 30px;
     z-index: 2;
+    height: 200;
   }
-
-  .our_products_content{
-    position: relative;
-    margin:auto;
-    width: 33%;
-    height: 455px;
-  } 
 
   .our_products_footer{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 40px;
     align-items: flex-end;
   }
 
@@ -620,8 +610,11 @@
   
   .button_shop:hover {
     background-color: #323232;
-  }
+  } 
 
+  .text_link {
+    color: #b59f5b;
+  }
 
   .address {
     display: flex;
@@ -703,21 +696,38 @@
   } 
 
 
-  @media (max-width: 1200px) and (min-width: 641px) {
+  @media (min-width: 641px) and (max-width: 1200px) {
     .header {
       background-image: url(sources/img/banner-bg-tablet.jpg);
     }
     
-    .trend_box_content {
-      position: relative;
-      width:calc(50% - 3px);
-      height: 300px;
-      margin-right: 3px;
-      margin-bottom: 3px;
+    .trend_box__content {
+      width: calc(50% - 6px);
+      margin-bottom: 6px;
     }
 
-    .trend_box__content:nth-child(2n+0) {
-      margin-right: 0px;
+    .content {
+      display: flex;
+      position:relative;
+      max-width: 700px;
+    }
+
+    .main {
+      max-width: 392px;
+      margin-right: 32px;
+
+    }
+
+    .content {
+      padding: 0;
+    }
+
+    .main__content {
+      display: block;
+    }
+
+    .genre_list {
+      margin-top: 10px;
     }
 
   .burger-menu,
@@ -730,18 +740,125 @@
     .menu {
       display: none;
     }
-/* 
-    .our_products_space {
 
-      max-width: 700px;
-
-    }
-
-    .our_products_content{
+    .our_products_content {
       position: relative;
-      width: calc(50% - 27px;);
-    } 
-    .our_products_content:nth-child(2n+1){
-      margin-right: 27px;
+      width: calc(50% - 40px);
+      margin-bottom: 30px;
     }
-  } */
+
+    .our_products_space{
+      margin: auto;
+      max-width: 700px;
+      margin-top: 64px;
+    }
+
+    .our_products_img{
+      position: absolute;
+      top:25;
+      right: 5;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .burger-menu,
+    .burger-menu::before,
+    .burger-menu::after {
+      display: block;
+      z-index: 5;
+    }
+
+    .header {
+      background-image: url(sources/img/banner-mobile.jpg);
+    }
+  
+      .menu {
+        display: none;
+      }
+
+      .blog_name {
+        font-size: 26px;
+        width: 329px;
+        padding-bottom: 300px;
+      }
+
+      .trend_box__content_space {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+      }
+
+      .trend_box__content {
+        width: 100%;
+        height: 330px;
+      }
+
+      .content {
+        display: block;
+        flex-direction: column;
+        position:relative;
+        max-width: 700px;
+        margin-left:auto;
+        margin-right:auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top:64px;
+        box-sizing: border-box;
+      }
+
+      .main {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .main__content {
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 400px;
+        margin:auto;
+        margin-top: 30px;
+      }
+
+      .a_content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 381px;
+      }
+
+      .genre_list {
+        margin-top: 10px;
+      }
+
+      .our_products_box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+
+      .aside {
+        margin-top: 30px;
+        margin-right:auto ;
+        margin-left: auto;
+      } 
+      
+      .our_products_space{
+        margin: auto;
+        max-width: 329px;
+        margin-top: 64px;
+      }
+
+      .our_products_content {
+        position: relative;
+        width: 100%;
+      }
+
+      .our_products_img{
+        position: absolute;
+        top:25;
+        right: 15;
+      }
+    
+  }
