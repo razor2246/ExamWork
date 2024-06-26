@@ -1063,7 +1063,7 @@
 
 @media (max-width: 640px) {
   .menu_logo { 
-    max-width: 330px
+    max-width: 100%;
   }
 
   
@@ -1096,13 +1096,14 @@
   }
 
   .logo {
-    display:absolute;
+    display:block;
     position:relative;
-    height: 60px;
+    min-height: 60px;
     top: 0;
     right: 50%;
     margin-left: 190px;
     z-index: 2;
+    margin-right: 0px;
   }
 
   .blog_name {
