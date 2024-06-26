@@ -70,6 +70,10 @@
     height: 40px;
     z-index: 2;
   }
+
+  .mobile-logo {
+    display: none;
+  }
   
   .menu {
     display:flex;
@@ -316,6 +320,7 @@
   .genre_list {
     display: flex;
     position:relative;
+    flex-wrap: wrap;
     box-sizing:border-box;
     margin-top: -5px;
   }
@@ -760,7 +765,7 @@
     margin-left: -197px;
     top: 250;
     z-index: 5;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -833,6 +838,7 @@
 
   .pop-up-radio-button-holder {
     width: 60px;
+    margin-right: 10px;
     vertical-align: text-top;
     display: flex;
     align-items: center;
@@ -883,7 +889,7 @@
     width: 100%;
     color: white;
     margin-top: 17px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-family: OpenSans-Bold,sans-serif;
     font-size: 14px;
   }
@@ -1064,6 +1070,9 @@
 @media (max-width: 640px) {
   .menu_logo { 
     max-width: 100%;
+    position: absolute;
+    top: 40;
+    right: 10;
   }
 
   
@@ -1072,18 +1081,17 @@
   .burger-menu::after {
     display: block;
     z-index: 5;
+    margin-left: auto;
   }
 
   .burger-menu:before {
     content: '';
-    margin-top: 192px;
-    margin-right: 120;
+    margin-top: 8px;
   }
   
   .burger-menu:after {
     content: '';
-    margin-top: 208px;
-    margin-right: 120;
+    margin-top: -18px;
   }
 
   .header {
@@ -1096,23 +1104,27 @@
   }
 
   .logo {
-    display:block;
-    position:relative;
-    min-height: 60px;
-    top: 0;
-    right: 50%;
-    margin-left: 190px;
-    z-index: 2;
-    margin-right: 0px;
+    display:none;
+  }
+
+  .mobile-logo {
+    display: block;
+    position: relative;
+    z-index: 4;
+    max-height: 62px;
+    margin: auto;
   }
 
   .blog_name {
     font-size: 26px;
     max-width: 329px;
     padding-bottom: 300px;
+    margin-top: 45px;
+    font-size: 26px;
+    line-height: 36px;
   }
 
-    .trend_box__content_space {
+  .trend_box__content_space {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -1172,10 +1184,10 @@
 
 
   .article_photo {
-      min-width: 329px;
-      max-width: 329px;
-      margin-right: 0px; 
-      object-fit: scale-down;
+      min-width: 10px;
+      max-width: 89%;
+      margin-right: auto;
+      margin-left: auto;
   }
 
   .genre_list {
@@ -1197,7 +1209,7 @@
 
   .our_products_space{
     margin: auto;
-    max-width: 329px;
+    max-width: 100%;
     margin-top: 64px;
   }
 
@@ -1209,6 +1221,7 @@
   .our_products_content {
     box-sizing: border-box;
     position: relative;
+    max-width: 329px;
     width: 90%;
     margin-bottom: 290px;
     margin-left: auto;
@@ -1217,8 +1230,13 @@
 
   .our_products_img{
     position: absolute;
+    max-width: 285px;
+    min-width: 10px;
     top:-260;
-    right: 3;
+    left: 50%;
+    margin-left: -142px ;
+    max-width: 265px;
+    min-width: 85%;
   }
 
   .search {
@@ -1229,5 +1247,50 @@
     max-width: 330px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+
+
+  .pop-up-box-place {
+    top: 70;
+    width: 329px;
+    left: 50%;
+    margin-left: -164px;
+  }
+
+  .pop-up-button-close {
+    height: 26px;
+    width: 26px;
+    top: -36;
+  }
+
+  .pop-up-radio-button {
+    height: 26px;
+    width: 26px;
+  }
+
+  .pop-up-radio-button:checked {
+    height: 26px;
+    width: 26px;
+  }
+
+  .pop-up-select {
+    height: 47px;
+  }
+}
+
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .trend_box__content_space {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  
+  
+  
+  .trend_box__content {
+    width: calc(50% - 6px);
+    margin-bottom: 6px;
   }
 }
